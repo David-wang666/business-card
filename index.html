@@ -64,12 +64,12 @@ body{
 .avatar-wrap{
   position:relative;flex-shrink:0;width:90px;height:90px;border-radius:50%;padding:3px;
   background:conic-gradient(from 0deg,#00d992,#00ffaa,#2fd6a1,#00d992,#00ffaa);
-  animation:spinGradient 6s linear infinite;box-shadow:0 0 30px rgba(0,217,146,.2);
+  animation:avatarBounce 2s ease-in-out infinite;box-shadow:0 0 30px rgba(0,217,146,.2);
 }
-@keyframes spinGradient{to{transform:rotate(360deg)}}
-.avatar-ring-outer{position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(0,217,146,.15);animation:spinRing 10s linear infinite reverse;pointer-events:none}
-.avatar-ring-inner{position:absolute;inset:-8px;border-radius:50%;border:1px dashed rgba(0,217,146,.1);animation:spinRing 15s linear infinite;pointer-events:none}
-@keyframes spinRing{to{transform:rotate(360deg)}}
+@keyframes avatarBounce{0%,100%{transform:scale(1)}15%{transform:scale(1.08)}30%{transform:scale(.97)}45%{transform:scale(1.04)}60%{transform:scale(1)}75%{transform:scale(1.02)}90%{transform:scale(.99)}}
+.avatar-ring-outer{position:absolute;inset:-4px;border-radius:50%;border:1.5px solid rgba(0,217,146,.15);animation:ringPulse 3s ease-in-out infinite;pointer-events:none}
+.avatar-ring-inner{position:absolute;inset:-8px;border-radius:50%;border:1px dashed rgba(0,217,146,.1);animation:ringPulse2 4s ease-in-out infinite;pointer-events:none}
+@keyframes ringPulse{0%,100%{transform:scale(1);opacity:.15}50%{transform:scale(1.12);opacity:.3}}@keyframes ringPulse2{0%,100%{transform:scale(1);opacity:.1}50%{transform:scale(1.18);opacity:.25}}
 .avatar-inner{
   width:100%;height:100%;border-radius:50%;overflow:hidden;background:#101010;
   display:flex;align-items:center;justify-content:center;
@@ -212,7 +212,32 @@ body{
         <span class="skill-badge">打螺丝&#183;精通</span>
         <span class="skill-badge">45岁退休计划</span>
         <span class="skill-badge">人生自由追求者</span>
-        <span class="skill-badge">牛马哲学</span>
+        <span class="skill-badge">住友&#183;13年</span><span class="skill-badge">牛马哲学</span>
+      </div>
+    </div>
+
+        <div class="divider"></div>
+
+    <div class="info-section float-item">
+      <div class="section-label"><span class="label-accent"></span> SUMITOMO·13YEARS</div>
+      <div class="data-row">
+        <div class="key">EXPERIENCE</div>
+        <div class="value">13年住友经历</div>
+      </div>
+      <div class="data-row">
+        <div class="key">INSIGHT</div>
+        <div class="value" style="font-size:12px;line-height:1.7">
+          对打螺丝有了更深的领悟<br>
+          每一颗螺丝背后，是匠心与责任的沉淀
+        </div>
+      </div>
+      <div class="tagline-box" style="margin:8px 0 0 0;padding:12px 14px;border-radius:8px;">
+        <div class="quote-icon" style="font-size:11px;margin-bottom:4px;gap:4px;">&#10095;_ 住友事業精神</div>
+        <p style="font-size:12px;line-height:1.6;min-height:auto;color:#b8b3b0;">
+          目先の利益や安易な利益（浮利）に走らず、<br>
+          着実・誠実な経営を旨とすることを<br>
+          強く戒める考え方です
+        </p>
       </div>
     </div>
 
